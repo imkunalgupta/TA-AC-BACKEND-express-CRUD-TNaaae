@@ -6,6 +6,7 @@ router.get('/new', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  console.log(req.body);
   res.send(req.body);
 });
 
@@ -14,8 +15,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  res.render('studentDetail', {
-    student: { name: 'rahul', email: 'rahul@altcampus.io' },
+  res.render('studentDetails', {
+    student: { name: 'Rahul', age: 18, email: 'rahul@altcampus.io' },
   });
 });
 
